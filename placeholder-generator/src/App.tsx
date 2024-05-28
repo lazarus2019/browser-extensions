@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [color, setColor] = useState('#fff');
+  const [color, setColor] = useState('#ffffff');
   const [isExpand, setIsExpand] = useState(false);
 
   const handleOnClick = async () => {
