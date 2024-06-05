@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Focus Mode",
+  "description": "asd",
+  "version": "1.0.0",
+  "icons": {
+    "32": "images/32.png",
+    "128": "images/32.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_icon": {
+      "32": "images/32.png"
+    }
+  },
+  "omnibox": { "keyword": "api" },
+  "permissions": ["scripting", "activeTab", "storage"]
+}
