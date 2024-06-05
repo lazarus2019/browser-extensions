@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Placeholder-Generator",
+  "name": "La-Generator",
   "icons": {
     "32": "./images/32.png"
   },
@@ -9,9 +9,18 @@
     "service_worker": "service_worker.js",
     "type": "module"
   },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ],
   "action": {
     "default_popup": "index.html"
   },
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "activeTab"],
   "host_permissions": ["http://*/*", "https://*/*"]
 }
