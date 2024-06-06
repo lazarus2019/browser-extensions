@@ -1,3 +1,4 @@
+console.log('run content.ks');
 (async () => {
   // Sends a message to the service worker and receives a tip in response
   const { tip } = await chrome.runtime.sendMessage({ greeting: 'tip' });

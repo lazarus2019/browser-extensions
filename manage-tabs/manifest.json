@@ -9,5 +9,11 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "matches": ["https://*/*"]
+    }
+  ],
   "host_permissions": ["https://developer.chrome.com/*"]
 }

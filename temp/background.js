@@ -8,6 +8,15 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+// Open options or introduce page after installed extension
+// chrome.runtime.onInstalled.addListener(({ reason }) => {
+//   if (reason === 'install') {
+//     chrome.tabs.create({
+//       url: 'options.html',
+//     });
+//   }
+// });
+
 chrome.runtime.onInstalled.addListener(({ reason }) => {
   console.log({ reason });
   if (reason === 'install') {
