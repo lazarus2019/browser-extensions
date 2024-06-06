@@ -17,5 +17,12 @@
     }
   },
   "omnibox": { "keyword": "api" },
-  "permissions": ["scripting", "activeTab", "storage"]
+  "permissions": ["scripting", "activeTab", "storage", "alarms"],
+  "host_permissions": ["https://extension-tips.glitch.me/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://developer.chrome.com/docs/extensions/*"],
+      "js": ["content.js"]
+    }
+  ]
 }

@@ -1,21 +1,18 @@
 import './sw-omnibox.js';
 import './sw-tips.js';
 
-// chrome.runtime.onInstalled.addListener(() => {
-//   console.log('set badgeText');
-//   chrome.action.setBadgeText({
-//     text: 'Tắt',
-//   });
-// });
+chrome.runtime.onInstalled.addListener(() => {
+  console.log('set badgeText');
+  chrome.action.setBadgeText({
+    text: 'Tắt',
+  });
+});
 
 chrome.runtime.onInstalled.addListener(({ reason }) => {
   console.log({ reason });
-  chrome.storage.local.set({
-    apiSuggestions: ['tabs', 'storage', 'scripting'],
-  });
   if (reason === 'install') {
     chrome.storage.local.set({
-      apiSuggestions: ['tabs', 'storage', 'scripting'],
+      apiSuggestions: ['tabs', 'storage', 'scripting', 'focus_mode'],
     });
   }
 
