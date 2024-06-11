@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 10px;
+  min-width: 300px;
+}
+
+.btn-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: teal;
+  color: #fff;
+  width: 100%;
+}
+
+.btn-container button:hover {
+  box-shadow: 1px 0 10px #eee;
+}
